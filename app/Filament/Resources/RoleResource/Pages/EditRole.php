@@ -16,4 +16,12 @@ class EditRole extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+    protected function getSavedNotificationTitle(): ?string
+    {
+        return 'Role Edited';
+    }
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }
