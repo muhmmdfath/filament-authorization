@@ -39,14 +39,20 @@ class PermissionResource extends Resource
         return $table
             ->columns([
                 //
+                TextColumn::make('id')
+                ->sortable(),
                 TextColumn::make('name')
-                ->label('Nama')
+                ->label('Nama'),
+                TextColumn::make('created_at')
+                    ->dateTime('d-M-Y')
+                    ->sortable()
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
