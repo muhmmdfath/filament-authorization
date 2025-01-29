@@ -12,7 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Spatie\Permission\Models\Permission;
+use App\Models\Permission;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 
